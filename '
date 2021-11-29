@@ -1,0 +1,71 @@
+# what is buffer
+1. vim does not edit `file` directly
+1. it loads the `file` into a `buffer`
+1. it edits the `buffer`
+1. it saves the `buffer` back to the `file`
+
+# creates a new buffer
+
+```=
+:new
+```
+
+```=
+<new buffer>*
+------------
+<cur buffer>
+
+```
+* the `new buffer` is unamed and does not link to any file
+* `*` indicates the active buffer
+
+# creates a new buffer
+
+```=
+:vnew
+```
+
+```=
+<new buffer>* | <cur buffer>
+```
+
+# loads a file to a buffer
+
+```=
+:e filename
+```
+
+# creates a new buffer and load a file
+
+```=
+:sp filename
+```
+* it arrange the buffer in the same way as `:new`
+
+```=
+:vs filename
+```
+* it arragnes the buffer in the same way as `:vnew`
+
+# list all the buffers
+
+```=
+:ls
+:buffers
+```
+
+# buffer index
+* the identifier of a buffer
+
+# buffer status
+* `%` current buffer, where you cursor is
+* `a` active buffer, buffers on your screen
+* `h` hidden buffer, buffers not on your screen
+* `#` alternate buffer, easy to switch between files
+
+# navigate between buffers
+
+```=
+b6
+```
+* go to the buffer number 6 (buffer index)
